@@ -619,6 +619,13 @@ config MSM_CPU_FREQ_MIN
 
 endif # CPU_FREQ_MSM
 
+config STATIC_UNDERVOLTING
+	bool "Enable SVS undervolting"
+	depends on (ARCH_MSM_SCORPION)
+	default y
+	help
+	  This enables static undervolting of the cpu
+
 config AXI_SCREEN_POLICY
         depends on ARCH_QSD8X50 || ARCH_MSM7X00A || ARCH_MSM7227 || ARCH_MSM7225
   depends on HAS_EARLYSUSPEND
